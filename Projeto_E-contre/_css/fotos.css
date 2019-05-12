@@ -1,0 +1,162 @@
+/*CRIANDO ALBUM DE FOTOS*/
+@charset "UTF-8";
+
+ul#album-fotos{
+	width: 700px;
+	/*margem 0 na esquerda e automatico pra todas as outras*/
+	margin: 0 auto;
+	padding: 50px;
+	overflow: hidden;
+	list-style: none;
+}
+
+ul#album-fotos li{
+	/*fazendo com que os itens da lista fiquem um do lado do outro*/
+	float: left;
+	/*fazendo um quadro de 200px por 200px, pra cada um dos itens*/
+	width: 200px;
+	height: 200px;
+	margin: 10px;
+	border: 5px solid #ffffff;
+	background-color: #ffffff;
+	/*efeito de sombra com deslocamento lateral, vertical, espalhamento e cor(rgba), respectivamente*/
+	box-shadow: 1px 1px 3px rgba(0,0,0,.4); 
+	/*monitorando todos os efeitos, o tempo que a transição ocorra e a forma do efeito(nesse caso, amplie de maneira suave)*/
+	/*pode ser declarado também assim: -webkit-transition(maneira antiga)*/
+	transition: all .4s ease-in;
+}
+
+/*criando formatação pra todos os <li> que tiverem span dentro*/
+ul#album-fotos li span{
+	/*escondendo a legenda*/
+	opacity: 0;
+	/*legenda branca com uma leva sombra preta*/
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #000000;
+	/*cor de fundo da legenda preto com uma leve transparencia*/
+	background-color: rgba(0,0,0,.3);
+	font-size: 9pt;
+	/*fazendo com que a legenda desça (parte inferior da imagem)*/
+	line-height: 370px;
+	/*aumentando a largura do fundoda legenda*/
+	padding: 5px;
+}
+
+/*formatação para que cada vez que passar o mouse por cima o item da lista (imagem), a legenda apareça*/
+ul#album-fotos li:hover span{
+	opacity: 1;
+}
+
+/*efeito pra ampliar os itens das listas(imagens), ao passar o mouse por cima*/
+ul#album-fotos li:hover{
+	/*pode ser declarado também assim: -webkit-transform (maneira antiga)*/
+	transform: scale(1.5);
+}
+
+ul#album-fotos li#foto01{
+	/*inserindo uma foto no item da lista, sem repetir*/
+	background: url('../_imagens/cao.jpg') no-repeat;
+	/*mudando o posicionamento da imagem (deixando inicialmente o foco no centro da imagem, para ajudar no momento de inserir o efeito do zoom): lateral% vertical%, respectivamente*/
+	background-position: 50% 50%;
+	/*tamanho da imagem de fundos*/
+	background-size: 400px 400px;
+	background-color: #ffffff;
+}
+
+/*criando efeito de zoom ao passar o mouse por cima do item da lista(imagem)*/
+ul#album-fotos li#foto01:hover{
+	/*voltando a posição anterior*/
+	background-position: 0px 0px;
+	/*voltando ao tamanho anterior*/
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto02{
+	/*inserindo uma foto no item da lista, sem repetir*/
+	background: url('../_imagens/cao2.jpg') no-repeat;
+	/*mudando o posicionamento da imagem (deixando inicialmente o foco no centro da imagem, para ajudar no momento de inserir o efeito do zoom): lateral% vertical%, respectivamente*/
+	background-position: 50% 50%;
+	/*tamanho da imagem de fundos*/
+	background-size: 400px 400px;
+	background-color: #ffffff;
+}
+
+/*criando efeito de zoom ao passar o mouse por cima do item da lista(imagem)*/
+ul#album-fotos li#foto02:hover{
+	/*voltando a posição anterior*/
+	background-position: 0px 0px;
+	/*voltando ao tamanho anterior*/
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto03{
+	/*inserindo uma foto no item da lista, sem repetir*/
+	background: url('../_imagens/cao3.jpg') no-repeat;
+	/*mudando o posicionamento da imagem (deixando inicialmente o foco no centro da imagem, para ajudar no momento de inserir o efeito do zoom): lateral% vertical%, respectivamente*/
+	background-position: 50% 50%;
+	/*tamanho da imagem de fundos*/
+	background-size: 400px 400px;
+	background-color: #ffffff;
+}
+
+/*criando efeito de zoom ao passar o mouse por cima do item da lista(imagem)*/
+ul#album-fotos li#foto03:hover{
+	/*voltando a posição anterior*/
+	background-position: 0px 0px;
+	/*voltando ao tamanho anterior*/
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto04{
+	/*inserindo uma foto no item da lista, sem repetir*/
+	background: url('../_imagens/gato.jpg') no-repeat;
+	/*mudando o posicionamento da imagem (deixando inicialmente o foco no centro da imagem, para ajudar no momento de inserir o efeito do zoom): lateral% vertical%, respectivamente*/
+	background-position: 50% 50%;
+	/*tamanho da imagem de fundos*/
+	background-size: 400px 400px;
+	background-color: #ffffff;
+}
+
+/*criando efeito de zoom ao passar o mouse por cima do item da lista(imagem)*/
+ul#album-fotos li#foto04:hover{
+	/*voltando a posição anterior*/
+	background-position: 0px 0px;
+	/*voltando ao tamanho anterior*/
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto05{
+	/*inserindo uma foto no item da lista, sem repetir*/
+	background: url('../_imagens/gato2.jpeg') no-repeat;
+	/*mudando o posicionamento da imagem (deixando inicialmente o foco no centro da imagem, para ajudar no momento de inserir o efeito do zoom): lateral% vertical%, respectivamente*/
+	background-position: 50% 50%;
+	/*tamanho da imagem de fundos*/
+	background-size: 400px 400px;
+	background-color: #ffffff;
+}
+
+/*criando efeito de zoom ao passar o mouse por cima do item da lista(imagem)*/
+ul#album-fotos li#foto05:hover{
+	/*voltando a posição anterior*/
+	background-position: 0px 0px;
+	/*voltando ao tamanho anterior*/
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto06{
+	/*inserindo uma foto no item da lista, sem repetir*/
+	background: url('../_imagens/gato3.jpg') no-repeat;
+	/*mudando o posicionamento da imagem (deixando inicialmente o foco no centro da imagem, para ajudar no momento de inserir o efeito do zoom): lateral% vertical%, respectivamente*/
+	background-position: 50% 50%;
+	/*tamanho da imagem de fundos*/
+	background-size: 400px 400px;
+	background-color: #ffffff;
+}
+
+/*criando efeito de zoom ao passar o mouse por cima do item da lista(imagem)*/
+ul#album-fotos li#foto06:hover{
+	/*voltando a posição anterior*/
+	background-position: 0px 0px;
+	/*voltando ao tamanho anterior*/
+	background-size: 200px 200px;
+}

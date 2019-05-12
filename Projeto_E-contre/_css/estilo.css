@@ -1,0 +1,324 @@
+/*Evitando problemas de acentuação da lingua portuguesa*/
+@charset "UTF-8";
+
+/*IMPORTANDO FONTE PERSONALIZADA DO GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+/*FONTES PERSONALIZADAS COM ARQUIVOS OTF E TTF(true type font)*/
+@font-face {
+    /*nome da fonte*/
+    font-family: 'FonteLogo';
+    /*origem do arquivo de fonte personalizada otf*/
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+/*configuração de estilo da página
+   modificação da configuração global
+   background-color: greenyellow; (cor de fundo)
+   color: red; (cor da fonte)
+   (formatação de cor através do código RGB)
+   background-color: #60453E;
+   o código gerado em hexadecimal pra cores RGB(Red/Green/Blue), funciona da seguinte maneira:
+   começa com o símbolo de cerquilha (#), seguido de seis dígitos:
+   os dois primeiros dígitos são a qtde de vermelho
+   os dois dígitos centrais são a qtde de verde
+   e os dois últimos dígitos são a qtde de azul
+   EXEMPLO EM HEXADECIMAL: background-color: #60453E;
+   EXEMPLO EM RGB: background-color: rgb(35, 137, 195);
+   Uma ferramenta gratuita com um ótimo seletor de cores é o GIMP
+   Uma ferramenta paga com um ótimo selector de cores é o Adobe Photoshop CC
+   rgba(canal alpha) é o nível de transparência da fonte, variando entre 0 à 1, sendo que, 0 é o valor
+   máximo de transparência
+   EXEMPLO color: rgba(0,0,0,0.1)
+   Pode se representar tbm pelo hsl(Matiz/Saturação/Luminosidade)
+   EXEMPLO: background-color: hsl(165, 81%, 93%);
+   hsla: background-color: hsl(165, 81%, 93%, 0.5);
+   OBS: imagens PNG são ligeiramente maiores que as JPG, causando um tráfego maior,
+   porém, é recomendada para quem quer trabalhar com melhor resolução e transparência*/
+body{
+    /*cor de fundo do site: cinza*/
+    font-family: Arial, sans-serif;
+    /*background-color: #dddddd;*//*hsl(165, 81%, 93%, 0.5);*/
+    background-image: url("../_imagens/patas2.jpeg");
+    color: rgba(0,0,0,1);
+
+}
+
+/*CRIANDO UMA FORMATAÇÃO PARA A DIV INTERFACE*/
+div#interface{
+    /*delimitando a largura*/
+    width: 1100px;
+    /*cor de fundo da interface: branco*/
+    background-color: #ffffff;
+    /*ajustando a margem da interface (área externa ao objeto), sendo cima,direita,baixo,esquerda, nessa ordem.
+    OBS: o parametro auto, significa que o navegador define automaticamente a margem,
+    nesse caso, as da direta e esquerda*/
+    margin: -20px auto 0px auto;
+    /*criando uma sombra em volta do objeto (deslocamento, lateral, vertical, espalhamento da sombra, cor da sombra)*/
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    /*ajustando o espaço interno do objeto
+    OBS: se todos os valores forem iguais, basta definir uma única vez.*/
+    padding: 10px ;
+
+    background-color: #16F1FF;
+}
+
+p{
+    text-align: justify;
+    text-indent: 50px;
+}
+/*FORMATANDO OS LINKS*/
+a{
+    color: #606060;
+    text-decoration: none;
+}
+/*DEIXAR O LINK SUBLINHADO, APÓS PASSAR O MOUSER POR CIMA*/
+a:hover{
+    text-decoration: underline;
+}
+
+/*criando uma área para o header cabeçallho com a identificação da imagem*/
+header#cabecalho img#icone {
+    position: absolute;
+    left: 780px;
+    top: 10px;
+}
+
+/*configurando todos os objetos que estão dentro desse cabeçalho*/
+header#cabecalho {
+/*dividindo o cabeçalho do conteúdo*/
+/*borda de baixo: largura, cor e formato da borda*/
+    border-bottom: 1px #606060 solid;
+/*altura do cabeçalho*/
+    height: 150px;
+/*exibindo o logo do google glass no cabeçalho, ou seja, exibindo uma "imagem"(background) através do CSS.
+definindo parametro para o objeto não se repetir e definindo o deslocamento lateral e vertical, respectivamente*/
+    
+    /*background: url("../_imagens/img_cabecalho.png") no-repeat 0px 80px;*/
+}
+
+/*configurando o título e subtítulo do cabeçalho*/
+/*definindo o tipo, tamanho, cor e sombra do titulo principal*/
+header#cabecalho h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    /*sombreamento no texto (lateral, vertical, espalhamento e cor)*/
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    /*definindo a margem de baixo*/
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2{
+    /*personalidando o subtitulo com a fonte importada do google fonts*/
+    font-family: 'Titillium Web', sans-serif;
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    /*definindo a margem de cima*/
+    margin-top: 0px;
+}
+
+/*FORMATAÇÃO DE IMAGENS COM LEGENDA*/
+/*OBS: sempre que eu utiçizar o parametro class, ddevo utilzar o nome da tag.nome da classe
+(padrão de referencia na linguagem CSS)*/
+
+/*CRIANDO EFEITOS*/
+/*colocamos o objeto conteiner que é o figure como posição relativa,
+isso é, vai ficar no lugar relativo ao código HTML, onde ele foi colocado no HTML,
+e dentro dele, o figcaption vai ter uma posição absoluta dentro do seu pai,
+que é o figure e vai ficar na posição zero*/
+figure.foto-legenda {
+    position: relative; /*essa cunfionalidade é necessária pois, figcaption é filho de figure*/
+    /*borda: largura/tipo/cor da borda*/
+    border: 8px solid white;
+    /*sombra na imagem: deslocamento horizontal/vertical/espalhamento/cor*/
+    box-shadow: 1px 1px 4px black;
+}
+
+/*formatando tudo que for img (adequando a borda, conforme o tamanho da imagem*/
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption{
+    /*escondendo a legenda temporariamente*/
+    opacity: 0;
+    /*tudo que for figcaption, vai ter uma posição absoluta dentro do conteiner(borda branca)*/
+    position: absolute;
+    top: 0px;
+    /*criando uma camada transparente no fundo da legenda, para que possa ser exibida exatamente*/
+    background-color: rgba(0,0,0,.4);
+    /*fazendo com que a fonte da legenda fique branca*/
+    color: white;
+    /*fazendo com que a borda preta da legenda, oculpetodo o espaço da imagem*/
+    width: 100%;
+    height: 100%;
+    /*criando espeço dentro da legenda*/
+    padding: 10px;
+    /*criando um box dentro da borda*/
+    box-sizing: border-box;
+    /*efeito de transição para a opacidade no tempo de um segundo,
+    ou seja, um segundo pra exibir ou esconder o conteúdo*/
+    transition: opacity 1s;
+}
+
+/*criando efeito de sobre-posição quando o mouse passar por cima*/
+/*OBS: o hover vai disparar uma classe específica/formatação específica,
+quando eu passar o mouse por cima do objeto, que no caso é o figcaption*/
+figure.foto-legenda:hover figcaption {
+    opacity: 1; /*opacidade de 100%*/
+}
+
+/*FORMATAÇÃO DO MENU*/
+
+/*flutuando como menu*/
+/*exibindo o navegador menu como um bloco, pois um bloco pode flutuar pela tela*/
+nav#menu{
+    display: block;
+}
+
+/*nome_da_tag#id*/
+nav#menu ul {
+    /*sem marcadores*/
+    list-style: none;
+    /*transformando o texto dos títulos do menu em maiuscula*/
+    text-transform: uppercase;
+    /*fazendo somente com que a lista flutue pela tela*/
+    /*passando por cima dos documentos*/
+    /*posição absoluta, ou seja, utilizar toda a tela do site
+    OBS: position: relative, faz com que fique limitado a posição dentro do conteiner*/
+    position: absolute;
+    top: -20px;
+    left: 300px;
+}
+
+/*ITENS DO MENU NO FORMATO HORIZONTAL*/
+nav#menu li{
+    /*fazendo com que o bloco seja exibido em uma mesma linha*/
+    display: inline-block;
+    /*colocando cor de fundo nos itens do menu*/
+    background-color: #dddddd;
+    /*criando espaço entres os itens (controlando o espaço dentro do objeto)*/
+    padding: 10px;
+    /*controlando o espaço fora do objeto*/
+    margin: 2px;
+    /*transição de tempo ao mudar de uma cor de fundo para outra, ao passar o mouse por cima do item*/
+    transition: background-color 1s;
+}
+
+/*ESCONDENDO O TEXTO MENU PRINCIPAL
+OBS: continua sendo visível para os mecanismos de busca, como titulo do menu de navegação*/
+nav#menu h1{
+    display: none;
+}
+
+/*EFEITO AO PASSAR O MOUSE POR CIMA DO ITEM DO MENU*/
+nav#menu li:hover{
+    /*alterando a cor de fundo, ao passar o mouse por cima do item do menu*/
+    background-color: #606060;
+}
+
+/*FORMATANDO OS LINKS DOS ITENS DO MENU*/
+nav#menu a{
+    /*tezto do link com cor preto*/
+    color: #000000;
+    /*retirando o sublinhado*/
+    text-decoration: none;
+}
+
+/*MUDANDO A COR DO LINKK AO PASSAR O MOUSE POR CIMA*/
+nav#menu a:hover{
+    color: #ffffff;
+    /*sublinhando ao passar o mouse por cima*/
+    text-decoration: underline;
+}
+
+/*CONFIGURANDO O ESTILO DA MINHA SESSÃO PRINCIPAL*/
+section#corpo{
+    /*exibindo como um bloc*/
+    display: block;
+    /*definindo a largura da área da sessão principal*/
+    width: 1000px;
+    /*definindo que a minha sessão pincipal flutue pelo lado esquerdo*
+    OBS: é necessário que os objetos estejam configurados para serem exibidos em bloco/
+     */
+    float: left;
+    /*criando uma borda do lado direito da área principal, para separar da área secundária
+    OBS: os respectivos parametros são: largura(espesura da linha), o tipo e a cor*/
+    border-right: 1px solid #606060;
+    /*margem direita interna da área principal*/
+    padding-right: 15px;
+}
+
+/*FORMATANDO O TÍTLOS SECUNDÁRIOS DENTRO DO ARTIGO PRINCIPAL*/
+article#noticia-principal h2{
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+/*FORMATANDO O CABEÇALHO DO ARTIGO*/
+header#cabecalho-artigo h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    }
+
+/*Formatação de classe genérica*/
+.direita{
+    text-align: right;
+}
+
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+}
+header#cabecalho-artigo h3{
+    font-size: 12pt;
+    color: #606060;
+}
+
+/*CONFIGURANDO O ESTILO DA MINHA ÁREA SECUNDÁRIA(LATERAL)
+aside#lateral{
+    display: block;
+    width: 350px;
+    float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}*/
+/*FORMATANDO OS TÍTULOS DA LINHA SECUNDÁRIA(ASIDE)
+aside#lateral h1{
+    font-family: FonteLogo, sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+}*/
+
+/*CONFIGURANDO O ESTILO DO RODAPÉ*/
+footer#rodape{
+    /*limpando toda a divisão que foi feita na section e aside, ou seja, limpando a configuração dos dois lados da página
+    OBS: o parametro both, faz com que o conteúdo da área do rodapé seja mostrada fora da divisão das demais áreas*/
+    clear: both;
+    /*borda no topo da área do rodapé*/
+    border-top: 1px solid #606060;
+}
+
+/*CENTRALIZANDO O PARAGRAFO DO RODAPÉ*/
+footer#rodape p{
+    text-align: center;
+}

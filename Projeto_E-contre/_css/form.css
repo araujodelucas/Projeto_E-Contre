@@ -1,0 +1,54 @@
+/*FORMATAÇÃO DO FORMULÁRIO*/
+/*conjunto de caracteres(acentuações) utilizados no Português-Brasil*/
+@charset "UTF-8";
+
+form{
+	width: 500px;
+	margin: auto;
+}
+
+input, textarea{
+	font-family: sans-serif;
+	font-weight: normal; /*para que não fique em negrito*/
+	font-size: 13pt;
+	background-color: rgba(255,255,255,.8);
+}
+
+/*formatação ao passar o mouse por cima do objetos input*/
+input:hover, textarea:hover{
+	/*alterando a cor de fundo para cinza, ao passar o mouse por cima*/
+	background-color: #dddddd;
+}
+
+legend{
+	color: #888888;
+	font-weight: bold; /*font em negrito*/
+	font-size: 13pt;
+	font-family: sans-serif;
+}
+
+fieldset{
+	border-color: #cecece; /*cor da borda*/
+	margin: 20px;
+}
+
+fieldset#sexo{
+	width: 150px;
+}
+
+/*INSERINDO IMAGEM NOS fieldsets abaixo, de maneira que não se repita, e esteja alinhado a leteral e vertical*/
+fieldset#usuario{
+	background: url("../_imagens/icone-contato.png") no-repeat 95% 95%;
+}
+
+fieldset#endereco{
+	background: url("../_imagens/icone-endereco.png") no-repeat 95% 95%;
+}
+
+fieldset#mensagem{
+	background: url("../_imagens/icone-mensagem.png") no-repeat 95% 95%;
+}
+
+fieldset#pedido{
+	background: url("../_imagens/icone-pagamento.png") no-repeat 95% 95%;
+}

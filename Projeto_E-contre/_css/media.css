@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/*FORMATANDO OS ARQUIVOS MULTIMIDIA*/
+/*tag#id*/
+div#tv-radio{
+	width: 900px;
+	height: 580px;
+	/*pra ficar centralizado*/
+	margin: auto;
+	/*imagem de fundo, e mesmo que haja algum problema,somente uma tv será exibida*/
+	background: url("../_imagens/radio-tv.png") no-repeat;
+}
+
+/*posicionando o vídeo dentro da tv e o player dentro do rádio*/
+/*tag#id*/
+audio#musica{
+	/*exibindo como um bloco*/
+	display: block;
+	/*pocisionamento relativo*/
+	position: relative;
+	/*aumentando o left, ajustando à direita*/
+	left: 575px;
+	/*aumentando o top, o player desce*/
+	top: 500px;
+	width: 300px;
+}
+
+video#filme{
+	display: block;
+	position: relative;
+	left: 90px;
+	top: 85px;
+	width: 440px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste JavaScript </title>
+    <!--ATIVANDO EVENTOS DE INTERAÇÃO ATRAVÉS DE OBJETOS HTML-->
+    <script>
+        /*função(rotina/conjunto de comandos caso o evento aconteça) pra acender a lampada*/
+        function acendeLampada() {
+            /*disparandomum aviso visual
+            alert("Lampada Acendeu")*/
+            /*alterando a imagem ao passar o mouse por cima (manipulando/referenciando o objeto através do id)*/
+            document.getElementById("luz").src = "_imagens/lampada-acesa.jpg";
+        }
+        /*alterando a imagem ao passar o mouse por cima (manipulando/referenciando o objeto através do id)*/
+        function apagaLampada() {
+            document.getElementById("luz").src = "_imagens/lampada-apagada.jpg";
+        }
+        /*alterando a imagem ao passar o mouse por cima (manipulando/referenciando o objeto através do id)*/
+        function quebraLampada() {
+            document.getElementById("luz").src = "_imagens/lampada-quebrada.jpg";
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Acenda a lâmpada</h1>
+    <!---chamando função no evento click do mouse
+    <img src="_imagens/lampada-apagada.jpg" onclick="acendeLampada()"/>-->
+
+    <!--chamando função ao passar o mouse por cima da imagem-->
+    <!--Pra alterar um objeto, é recomendável dar uma identificação à ele-->
+    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="quebraLampada()"/>
+</body>
+</html>

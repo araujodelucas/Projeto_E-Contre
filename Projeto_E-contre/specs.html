@@ -1,0 +1,131 @@
+<!--REPLICANDO O CONTEÚDO DO MENU PRINCIPAL-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Tudo sobre Google Glass</title>
+    <!--criando ligação entre o arquivo html com o css (folha de estilo)-->
+    <!--href (hipertext reference) para chamar um arquivo de fora-->
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" href="_css/media.css"/>
+
+</head>
+<!--chamando pasta/arquivo com a função que irá alterar a foto, através dos itens do menu-->
+<script src="_javascript/funcoes.js"></script>
+<!--opcional(já como padrão do html): especificar o tipo de linguagem, nesse caso, javascript
+<script language="JavaScript" src="_javascript/funcoes.js"></script>-->
+<body>
+<div id="interface"><!--criando uma divisão, ou seja, uma delimitação para o site-->
+
+    <header id="cabecalho">
+        <hgroup><!--Agrupando os títulos semelhantes-->
+            <h1>Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+
+        <!--delimitando a imagem-->
+        <!--automaticamente, todas as caracteristicas de borda e de legenda,
+        serão exibidas e aplicadas à essa imagem
+        <figure class="foto-legenda">-->
+        <!--anexando imagem-->
+        <img id="icone" src="_imagens/multimidia.png"/>
+        <!--inserindo legenda na imagem
+        <figcaption>
+        Óculos
+        </figcaption>
+        </figure>-->
+
+        <!--conteiner que cria uma área de navegação dentro do site
+        Nesse caso, estou criando um menu de navegação-->
+        <!--OBS: tipos de listas no HTML5:
+        ordered lists - ol e unordered lists - ul (com demarcadores)
+        Dentro de cada lista tem list items - li-->
+        <!--Tipos de organização de listas ordenadas:
+        type="1": orgdem numérica (padrão)
+        type="a" ou type="A": ordem alfabética
+        type="i" ou type="I": ordem em algarismos romano-->
+        <!--Ordenando em ordem numérica e iniciando 3
+        EXEMPLO: <ol type="1" start="3">
+        OBS: parametro start só aceito valores numéricos, mesmo pra ordenar em ordem alfabética-->
+        <!--Tipos de organização de listas não ordenadas:
+        type="squares": demarcadores quadrados
+        type="circle": demarcadores circulares com fundo claro
+        type="disc": demarcadores circulares com fundo preto (padrão)-->
+        <!--<a>ancora</a>: base para criação de links
+      href="hipertext reference": parametro da ancora, referenciando outro site
+      target="_blank": abri o site em outra aba-->
+
+        <!--Menu de navegação-->
+        <nav id="menu"><!--identificando o menu de navegação-->
+            <h1>Menu Principal</h1>
+            <!--lista não ordenada-->
+            <ul type="disc">
+                <!--itens da lista-->
+                <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudoFoto('_imagens/multimidia.png')"><a href="index.html">Home</a></li>
+                <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
+                <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fotos.html">Fotos</a></li>
+                <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+                <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section id="corpo-full">
+    <!--<article>utilizar mais de um artigo(assunto) na section</article>-->
+    <article id="noticia-principal">
+        <!--Cabeçalho do artigo-->
+        <header id="cabecalho-artigo">
+            <hgroup>
+                <!--<br/> (break row) ou (quebra de linha)-->
+                <!--&nbsp; (non-breaking space) ou (espaço sem quebra)-->
+                <h3>Glass > Especificações</h3>
+                <h1>Raio-X no Google Glass</h1>
+                <h2>por Gustavo Guanabara</h2>
+                <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+        </header>
+    </article>
+</section>
+
+<p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+<!--sessão com imagem e iframe
+OBS: iframe é um código em html que carrega uma página dentro de outra página (carrega um conteúdo localizado em outro arquivo)-->
+        <section id="conteudo">
+            <!--usemap: apontando o mapa de imagem que sérá utilizado-->
+            <img src="_imagens/glass-esquema-marcado.jpg" usemap="#meumapa" />
+            <!--MAPAS DE IMAGEM
+                criando relação entre o mapa e a imagem
+                OBS: é recomendável que a tag do map esteja na sequencia da imagem que ele será utilizado todo mapa é composto de área
+                Toda área tem o seu shape definido
+                Existem três tipos de shapes: retângulos, círculos e poligonal
+                Parametro coords: linhas coordenais
+                Parametro href nesse contexto: qual arquivo será aberto, quando eu clicar com p mouse
+                sobre essas coordenadas, diretamente posicionado no artigo de tela
+                Parametro target: em que lugar o arquivo será aberto, nesse caso,
+                passando como parametro o nome do iframe-->
+            <map name="meumapa">
+                <!--Tipo de área retangular: os dois primeiros valores é o ponto do canto superior esquerdo, enquanto os dois últimos valores, é o ponto do canto interior direito-->
+                <area shape="rect" coords="179,202,270,260" href="google-glass.html#tela" 
+                target="janela">
+                <!--Tipo de área circular: os dois primeiros valores são o ponto central, e o segundo é o raio(metade da largura/altura)-->
+                <area shape="circle" coords="158,243,12" href="google-glass.html#camera" target="janela">
+                <area shape="circle" coords="73,52,12" href="google-glass.html#gadgets" target="janela">
+                <!--Tipo de área poligonal: não é especificado quantos pontos eu vou precisar, isso vai depender da área que eu quero selecionar, pelo menos e no máximo quantos pontos eu quiser-->
+                <!--OBS: as coordenadas abaixo, são referentes a cada ponto da área, no sentido horário-->
+                <area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#sensores" target="janela">
+            </map>
+            <iframe src="google-glass.html" name="janela" id="frame-spec"></iframe>
+        </section>
+    </article>
+</section>
+<!--REPLICANDO O FINAL DO ARQUIVO(RODAPÉ)-->
+    <!--delimitando a área de rodapé-->
+    <footer id="rodape">
+        <p>Copyright &copy; 2013 - by Gustavo Guanabara<br/>
+            <a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> |
+            <a href="http://twitter.com/cursosemvideo" target="_blank">Twitter</a></p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/*FAZENDO AS CONFIGURAÇÕES DO QUE SE REFERE AOS OBJETOS QUE ESTÃO APENAS NO ARQUIVO specs.css*/
+section#conteudo{
+    width: 1000px;
+    /*conteúdo centralizado, independente do espaço que ele oculpe*/
+    margin: auto;
+}
+
+iframe#frame-spec{
+    width: 400px;
+    height: 280px;
+    /*removendo a borda do iframe*/
+    border: none;
+    /*removendo a visualização do conteúdo*/
+    overflow: hidden;
+}
+/*configuração de webkit*/
+iframe#frame-spec::-webkit-scrollbar{
+    display: none;
+}
